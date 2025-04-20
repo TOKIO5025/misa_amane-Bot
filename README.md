@@ -1,4 +1,4 @@
-<h1 align="center">✦ Yυƙι-Sυσυ-Bσƚ ✦</h1>
+<h1 align="center">✦ Misa-amane-Bσƚ ✦</h1>
 
  <img src= "https://qu.ax/mvXHU.jpg">
     </p>
