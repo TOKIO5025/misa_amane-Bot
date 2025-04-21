@@ -12,16 +12,16 @@ let handler = async (m, { conn, args }) => {
     let txt = `✦ ₊ ˚ ꒰  Hola! Soy  *${botname}* (｡>ω<｡)ﾉ  ꒱ ˚ ₊ ✦
 
 ── *Info General* ──
-εїз Cliente  : @${userId.split('@')[0]}
-εїз Modo  : Publico
-εїз Bot  : ${(conn.user.jid == global.conn.user.jid ? 'Principal 🅥' : 'Prem Bot 🅑')}
-εїз Activada  : ${uptime}
-εїз Usuarios  : ${totalreg}
-εїз Comandos  : ${totalCommands}
-εїз Baileys  : Multi Device
+εїз *_Cliente* : @${userId.split('@')[0]}
+εїз *_Modo_* : Publico 🌸
+εїз *_Bot_* : ${(conn.user.jid == global.conn.user.jid ? '```Principal``` 🫦' : '`Sub Bot 🌸`')}
+εїз *_Activada_* : ${uptime}
+εїз *_Usuarios_* : ${totalreg}
+εїз *_Comandos_* : ${totalCommands}
+εїз *_Baileys_* : Multi Device
 ─────────────
 
-ღ Crea un *Sub-Bot* con tu número utilizando *#qr* o *#code*
+ღ Crea tu *Sub-Bot* con tu número utilizando *#qr* o *#code* 🙈
 
 ── *『 Info-Bot 』* ──
 ｡ﾟ･ ⋆｡ﾟ⁀➷ Comandos para ver estado e información de la Bot.
