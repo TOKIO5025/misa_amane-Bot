@@ -7,22 +7,23 @@ let handler = async (m, { conn, args }) => {
     let totalreg = Object.keys(global.db.data.users).length
     let totalCommands = Object.values(global.plugins).filter((v) => v.help && v.tags).length
 
-    let txt = `
-✦ ₊ ˚ ꒰  Hola! Soy  *${botname}* (｡>ω<｡)ﾉ  ꒱ ˚ ₊ ✦
-｡ﾟﾟ･｡･ﾟﾟ｡ ♡ Aquí tienes la lista de comandos
-ﾟ。       ｡ﾟ ──  *ミ☆ Info General ☆彡* ──
-    ﾟ･｡･ﾟ    εїз Cliente  : @${userId.split('@')[0]}
-                 εїз Modo  : Publico
-                 εїз Bot  : ${(conn.user.jid == global.conn.user.jid ? 'Principal 🅥' : 'Prem Bot 🅑')}
-                 εїз Activada  : ${uptime}
-                 εїз Usuarios  : ${totalreg}
-                 εїз Comandos  : ${totalCommands}
-                 εїз Baileys  : Multi Device
-╰┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈╯
+    // Use a template literal for better multi-line string formatting
+    // Shortening the decorative lines
+    let txt = `✦ ₊ ˚ ꒰  Hola! Soy  *${botname}* (｡>ω<｡)ﾉ  ꒱ ˚ ₊ ✦
+
+── *Info General* ──
+εїз Cliente  : @${userId.split('@')[0]}
+εїз Modo  : Publico
+εїз Bot  : ${(conn.user.jid == global.conn.user.jid ? 'Principal 🅥' : 'Prem Bot 🅑')}
+εїз Activada  : ${uptime}
+εїз Usuarios  : ${totalreg}
+εїз Comandos  : ${totalCommands}
+εїз Baileys  : Multi Device
+─────────────
+
 ღ Crea un *Sub-Bot* con tu número utilizando *#qr* o *#code*
 
-═ஓ๑♡๑ஓ═  *『 Info-Bot 』* ═ஓ๑♡๑ஓ═
-
+── *『 Info-Bot 』* ──
 ｡ﾟ･ ⋆｡ﾟ⁀➷ Comandos para ver estado e información de la Bot.
 ✿ *#help • #menu*
   ₊˚★ Ver la lista de comandos de la Bot.
@@ -63,8 +64,7 @@ let handler = async (m, { conn, args }) => {
 ✿ *#editautoresponder*
   ₊˚★ Configurar un Prompt personalizado de la Bot.
 
-═ஓ๑♡๑ஓ═  *『 Buscadores 』* ═ஓ๑♡๑ஓ═
-
+── *『 Buscadores 』* ──
 ｡ﾟ･ ⋆｡ﾟ⁀➷ Comandos para realizar búsquedas en distintas plataformas.
 ✿ *#tiktoksearch • #tiktoks*
   ₊˚★ Buscador de videos de tiktok.
@@ -99,8 +99,7 @@ let handler = async (m, { conn, args }) => {
 ✿ *#npmjs*
   ₊˚★ Buscandor de npmjs.
 
-═ஓ๑♡๑ஓ═  *『 Descargas 』* ═ஓ๑♡๑ஓ═
-
+── *『 Descargas 』* ──
 ｡ﾟ･ ⋆｡ﾟ⁀➷ Comandos de descargas para varios archivos.
 ✿ *#tiktok • #tt*
   ₊˚★ Descarga videos de TikTok.
@@ -143,8 +142,7 @@ let handler = async (m, { conn, args }) => {
 ✿ *#animelinks • #animedl*
   ₊˚★ Descarga Links disponibles de descargas.
 
-═ஓ๑♡๑ஓ═  *『 Economia 』* ═ஓ๑♡๑ஓ═
-
+── *『 Economia 』* ──
 ｡ﾟ･ ⋆｡ﾟ⁀➷ Comandos de economía y rpg para ganar dinero y otros recursos.
 ✿ *#w • #work • #trabajar*
   ₊˚★ Trabaja para ganar ${moneda}.
@@ -203,8 +201,7 @@ let handler = async (m, { conn, args }) => {
 ✿ *#christmas • #navidad*
   ₊˚★ Reclama tu regalo navideño (Solo en Navidad).
 
-═ஓ๑♡๑ஓ═  *『 Gacha 』* ═ஓ๑♡๑ஓ═
-
+── *『 Gacha 』* ──
 ｡ﾟ･ ⋆｡ﾟ⁀➷ Comandos de gacha para reclamar y colecciónar personajes.
 ✿ *#rollwaifu • #rw • #roll*
   ₊˚★ Waifu o husbando aleatorio.
@@ -223,8 +220,7 @@ let handler = async (m, { conn, args }) => {
 ✿ *#waifusboard • #waifustop • #topwaifus*
   ₊˚★ Ver el top de personajes con mayor valor.
 
-═ஓ๑♡๑ஓ═  *『 Stickers 』* ═ஓ๑♡๑ஓ═
-
+── *『 Stickers 』* ──
 ｡ﾟ･ ⋆｡ﾟ⁀➷ Comandos para creaciones de stickers etc.
 ✿ *#sticker • #s*
   ₊˚★ Crea stickers de (imagen/video)
@@ -245,8 +241,7 @@ let handler = async (m, { conn, args }) => {
 ✿ *#wm*
   ₊˚★ Cambia el nombre de los stickers.
 
-═ஓ๑♡๑ஓ═  *『 Herramientas 』* ═ஓ๑♡๑ஓ═
-
+── *『 Herramientas 』* ──
 ｡ﾟ･ ⋆｡ﾟ⁀➷ Comandos de herramientas con muchas funciones.
 ✿ *#calcular • #calcular • #cal*
   ₊˚★ Calcular todo tipo de ecuaciones.
@@ -277,8 +272,7 @@ let handler = async (m, { conn, args }) => {
 ✿ *#translate • #traducir • #trad*
   ₊˚★ Traduce palabras en otros idiomas.
 
-═ஓ๑♡๑ஓ═  *『 Perfil 』* ═ஓ๑♡๑ஓ═
-
+── *『 Perfil 』* ──
 ｡ﾟ･ ⋆｡ﾟ⁀➷ Comandos de perfil para ver, configurar y comprobar estados de tu perfil.
 ✿ *#reg • #verificar • #register*
   ₊˚★ Registra tu nombre y edad en el bot.
@@ -311,8 +305,7 @@ let handler = async (m, { conn, args }) => {
 ✿ *#confesiones • #confesar*
   ₊˚★ Confiesa tus sentimientos a alguien de manera anonima.
 
-═ஓ๑♡๑ஓ═  *『 Grupos 』* ═ஓ๑♡๑ஓ═
-
+── *『 Grupos 』* ──
 ｡ﾟ･ ⋆｡ﾟ⁀➷ Comandos de grupos para una mejor gestión de ellos.
 ✿ *#config • #on*
   ₊˚★ Ver opciones de configuración de grupos.
@@ -379,8 +372,7 @@ let handler = async (m, { conn, args }) => {
 ✿ *#listnum • #kicknum*
   ₊˚★ Elimine a usuario por el prefijo de país.
 
-═ஓ๑♡๑ஓ═  *『 Anime 』* ═ஓ๑♡๑ஓ═
-
+── *『 Anime 』* ──
 ｡ﾟ･ ⋆｡ﾟ⁀➷ Comandos de reacciones de anime.
 ✿ *#angry • #enojado* + <mencion>
   ₊˚★ Estar enojado
@@ -451,8 +443,7 @@ let handler = async (m, { conn, args }) => {
 ✿ *#think* + <mencion>
   ₊˚★ Pensar en algo
 
-═ஓ๑♡๑ஓ═  *『 NSFW 』* ═ஓ๑♡๑ஓ═
-
+── *『 NSFW 』* ──
 ｡ﾟ･ ⋆｡ﾟ⁀➷ Comandos NSFW (Contenido para adultos)
 ✿ *#anal* + <mencion>
   ₊˚★ Hacer un anal
@@ -497,8 +488,7 @@ let handler = async (m, { conn, args }) => {
 ✿ *#yuri • #tijeras* + <mencion>
   ₊˚★ Hacer tijeras.
 
-═ஓ๑♡๑ஓ═  *『 Juegos 』* ═ஓ๑♡๑ஓ═
-
+── *『 Juegos 』* ──
 ｡ﾟ･ ⋆｡ﾟ⁀➷ Comandos de juegos para jugar con rus amigos.
 ✿ *#amistad • #amigorandom*
   ₊˚★ hacer amigos con un juego.
@@ -550,7 +540,7 @@ let handler = async (m, { conn, args }) => {
   ₊˚★ Empieza un sorteo.
 ✿ *#top*
   ₊˚★ Empieza un top de personas.
-✿ *#formartrio* + <mencion>
+✿ *#formartrio* + <mension>
   ₊˚★ Forma un trio.
 ✿ *#ahorcado*
   ₊˚★ Diviertete con la bot jugando el juego ahorcado.
@@ -566,7 +556,7 @@ let handler = async (m, { conn, args }) => {
   ₊˚★ Juega un pvp contra otro usuario.
 ✿ *#ttt*
   ₊˚★ Crea una sala de juego.
-`.trim()
+`; // Closing the template literal
 
     await conn.sendMessage(m.chat, {
         text: txt,
