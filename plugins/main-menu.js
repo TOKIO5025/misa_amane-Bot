@@ -12,13 +12,13 @@ let handler = async (m, { conn, args }) => {
     let txt = `✦ ₊ ˚ ꒰  Hola! Soy  *${botname}* (｡>ω<｡)ﾉ  ꒱ ˚ ₊ ✦
 
 ── *Info General* ──
-εїз *_Cliente* : @${userId.split('@')[0]}
-εїз *_Modo_* : Publico 🌸
-εїз *_Bot_* : ${(conn.user.jid == global.conn.user.jid ? '```Principal``` 🫦' : '`Sub Bot 🌸`')}
-εїз *_Activada_* : ${uptime}
-εїз *_Usuarios_* : ${totalreg}
-εїз *_Comandos_* : ${totalCommands}
-εїз *_Baileys_* : Multi Device
+εїз *_Cliente_* *:* @${userId.split('@')[0]} 💖
+εїз *_Modo_* *:* Publico 🌸
+εїз *_Bot_* *: ${(conn.user.jid == global.conn.user.jid ? '```Principal``` 🫦' : '`Sub Bot 🌸`')}
+εїз *_Activada_* *:* ${uptime} ⏱️
+εїз *_Usuarios_* *:* ${totalreg} 🍀
+εїз *_Comandos_* *:* ${totalCommands} 💚
+εїз *_Baileys_* *:* Multi Device 🌻
 ─────────────
 
 ღ Crea tu *Sub-Bot* con tu número utilizando *#qr* o *#code* 🙈
