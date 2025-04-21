@@ -69,7 +69,7 @@ global.waitttt = '❍ Espera un momento, soy lenta...';
 var canal = 'https://whatsapp.com/channel/0029Vaqe1Iv65yDAKBYr6z0A'  
 var comunidad = 'https://chat.whatsapp.com/KC6rrPoGCciLA4a7NaPL7u'
 var git = 'https://github.com/TOKIO5025'
-var github = '' 
+var github = 'https://github.com/TOKIO5025/misa_amane-Bot' 
 let correo = 'albertodovi100@gmail.com'
 global.redes = [canal, comunidad, git, github, correo].getRandom()
 
