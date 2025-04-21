@@ -43,7 +43,7 @@ let { say } = cfonts
 
 console.log(chalk.bold.redBright(`\n✰ Iniciando misa-amane-Bot ✰\n`))
 
-say('misaamanwbot-MD', {
+say('misa amane-bot-MD', {
 font: 'block',
 align: 'center',
 colors: ['magentaBright']
