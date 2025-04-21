@@ -1,7 +1,7 @@
 import { exec } from 'child_process';
 
 let handler = async (m, { conn }) => {
-  m.reply(`${emoji2} Actualizando el bot...`);
+  m.reply(`${emoji2} Actualizando la bot ꉂ(ˊᗜˋ*)♡`);
 
   exec('git pull', (err, stdout, stderr) => {
     if (err) {
@@ -23,7 +23,7 @@ let handler = async (m, { conn }) => {
 
 handler.help = ['update'];
 handler.tags = ['owner'];
-handler.command = ['update'];
+handler.command = ['update', 'actualizar'];
 handler.rowner = true;
 
 export default handler;
